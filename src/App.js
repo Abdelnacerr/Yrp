@@ -1,40 +1,11 @@
-import React, { useState } from "react";
-import Popup from "react-animated-popup";
+import React from "react";
+import Facebook from "./components/Facebook";
 
-const containerStyle = {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  minHeight: "50vh",
-};
-
-const buttonStyle = {
-  backgroundColor: "cadetblue",
-  color: "#fff",
-  padding: 10,
-  cursor: "pointer",
-};
-
-const pStyle = {
-  textAlign: "center",
-};
-
-function App() {
-  const [visible, setVisible] = useState(false);
-
+export default function App() {
   return (
-    <div className="App" style={containerStyle}>
-      <div style={buttonStyle} onClick={() => setVisible(!visible)}>
-        Show popup!
-      </div>
-      <Popup visible={visible} onClose={() => setVisible(false)}>
-        <p style={pStyle}>
-          Finally, an animated popup that is dead simple and customizable to the
-          core!
-        </p>
-      </Popup>
+    <div>
+      <div>Please Login to generate your reviews</div>
+      <Facebook />
     </div>
   );
 }
-
-export default App;
